@@ -1,0 +1,178 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark">
+  <style>html, body { background-color: #222222; visibility: hidden; }</style>
+  <title>moss's spaceship</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">
+    <img src="assets/others/mossrover_sign_logo.png" alt="Logo">
+  </a>
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="socials.html">Socials</a>
+    <a href="commissions.html" class="active">Commissions</a>
+    <div class="dropdown">
+      <button class="dropdown-btn" onclick="toggleMenu()">More</button>
+      <div class="dropdown-menu">
+        <a href="tech.html">My Tech</a>
+        <a href="#">WIP 🚧</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="commissions-container">
+    <h1>Commissions</h1>
+    <p>I do VRChat avatar retextures! Here's what I offer:</p>
+
+    <div class="pricing-cards">
+      <div class="pricing-card">
+        <h2>Basic Pack</h2>
+        <p class="price">5€ / $5 USD</p>
+        <p>Custom retexture for your VRChat avatar. Requires you to own the avatar base.</p>
+      </div>
+      <div class="pricing-card">
+        <h2>Full Pack</h2>
+        <p class="price">10€ / $10 USD</p>
+        <p>Retexture + upload to VRChat included. Requires you to own the avatar base.</p>
+      </div>
+      <div class="pricing-card">
+        <h2>Extras</h2>
+        <p class="price">+3€ - 5€ / USD</p>
+        <p>Additional accessories or complements. Price varies depending on availability.</p>
+      </div>
+    </div>
+
+    <a href="https://commissions.m055-r0-v3r.com" target="_blank" class="commission-btn">View full info →</a>
+
+    <h2 class="examples-title">Examples</h2>
+    <div class="examples-grid">
+      <div class="example-card">
+        <a onclick="openLightbox(0)" class="gallery-item">
+          <img src="assets/commissions_photos/moss_synth_avatar.png" class="example-img">
+        </a>
+        <p>Avatar made for MySelf — Base: Nicoreda Synth</p>
+      </div>
+      <div class="example-card">
+        <a onclick="openLightbox(1)" class="gallery-item">
+          <img src="assets/commissions_photos/unril_protogen_avatar.png" class="example-img">
+        </a>
+        <p>Avatar made for UnrilFur — Base: Nicoreda Synth</p>
+      </div>
+      <div class="example-card">
+        <a onclick="openLightbox(2)" class="gallery-item">
+          <img src="assets/commissions_photos/stepigo_lautus-k_avatar.png" class="example-img">
+        </a>
+        <p>Avatar made for Stepigo — Base: Lautus-K</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div class="lightbox" id="lightbox" onclick="handleLightboxClick(event)">
+  <a class="lightbox-close" onclick="closeLightbox()"></a>
+  <button class="lightbox-prev" onclick="prevImage()">&#8592;</button>
+  <div class="lightbox-content">
+    <img id="lightbox-img" src="" alt="">
+    <p id="lightbox-desc"></p>
+  </div>
+  <button class="lightbox-next" onclick="nextImage()">&#8594;</button>
+</div>
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-webring">
+      <a href="https://protogen.chat/webring/m055-r0-v3r.com/previous">← Prev</a>
+      <a href="https://protogen.chat/webring">Webring</a>
+      <a href="https://protogen.chat/webring/m055-r0-v3r.com/next">Next →</a>
+    </div>
+    <p class="footer-copy">© 2026 MossRover — All rights reserved</p>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    document.fonts.ready.then(function() {
+      document.body.style.visibility = 'visible';
+    });
+  });
+
+  function toggleMenu() {
+    const menu = document.querySelector('.dropdown-menu');
+    menu.classList.toggle('active');
+  }
+
+  const images = [
+    { src: "assets/commissions_photos/moss_synth_avatar.png", desc: "Avatar made for MySelf — Base: Nicoreda Synth" },
+    { src: "assets/commissions_photos/unril_protogen_avatar.png", desc: "Avatar made for UnrilFur — Base: Nicoreda Protogen" },
+    { src: "assets/commissions_photos/stepigo_lautus-k_avatar.png", desc: "Avatar made for Stepigo — Base: Lautus-K" }
+  ];
+
+  let currentIndex = 0;
+
+  function openLightbox(index) {
+    currentIndex = index;
+    document.getElementById('lightbox-img').src = images[currentIndex].src;
+    document.getElementById('lightbox-desc').textContent = images[currentIndex].desc;
+    document.getElementById('lightbox').classList.add('active');
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('active');
+  }
+
+  function handleLightboxClick(event) {
+    if (event.target === document.getElementById('lightbox')) {
+      closeLightbox();
+    }
+  }
+
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    document.getElementById('lightbox-img').src = images[currentIndex].src;
+    document.getElementById('lightbox-desc').textContent = images[currentIndex].desc;
+  }
+
+  function prevImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    document.getElementById('lightbox-img').src = images[currentIndex].src;
+    document.getElementById('lightbox-desc').textContent = images[currentIndex].desc;
+  }
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+      closeLightbox();
+    }
+    if (event.key === 'ArrowRight') {
+      nextImage();
+    }
+    if (event.key === 'ArrowLeft') {
+      prevImage();
+    }
+  });
+
+  function openLightbox(index) {
+    currentIndex = index;
+    document.getElementById('lightbox-img').src = images[currentIndex].src;
+    document.getElementById('lightbox-desc').textContent = images[currentIndex].desc;
+    document.getElementById('lightbox').classList.add('active');
+    document.body.style.overflow = 'hidden'; // evita el scroll mientras está abierto
+    window.scrollTo(0, 0);  // añade esto
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('active');
+    document.body.style.overflow = ''; // restaura el scroll
+  }
+</script>
+
+</body>
+</html>

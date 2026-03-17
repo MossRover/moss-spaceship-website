@@ -1,0 +1,124 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark">
+  <style>html, body { background-color: #222222; visibility: hidden; }</style>
+  <title>moss's spaceship</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">
+    <img src="assets/others/mossrover_sign_logo.png" alt="Logo">
+  </a>
+
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="socials.html" class="active">Socials</a>
+    <a href="commissions.html">Commissions</a>
+
+    <div class="dropdown">
+      <button class="dropdown-btn" onclick="toggleMenu()">More</button>
+      <div class="dropdown-menu">
+        <a href="tech.html">My Tech</a>
+        <a href="#">WIP 🚧</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="socials-container">
+    <h1>Socials</h1>
+    <div class="socials-grid">
+      <a href="https://discord.com/users/mossrover" class="social-card">
+        <i class="fa-brands fa-discord"></i>
+        Discord
+      </a>
+      <a href="https://bsky.app/profile/m055-r0-v3r.com" class="social-card">
+        <i class="fa-brands fa-bluesky"></i>
+        Bluesky
+      </a>
+      <a href="https://twitter.com/moss_rover" class="social-card">
+        <i class="fa-brands fa-twitter"></i>
+        Twitter
+      </a>
+      <a href="https://twitch.tv/mossrover" class="social-card">
+        <i class="fa-brands fa-twitch"></i>
+        Twitch
+      </a>
+      <a href="https://github.com/mossrover" class="social-card">
+        <i class="fa-brands fa-github"></i>
+        Github
+      </a>
+      <a href="https://ko-fi.com/mossrover" class="social-card">
+        <i class="fa-solid fa-mug-hot"></i>
+        Ko-fi
+      </a>
+      <a href="https://commissions.m055-r0-v3r.com" class="social-card">
+        <i class="fa-solid fa-paintbrush"></i>
+        Commissions
+      </a>
+    </div>
+    <div class="cool-sites">
+      <h2>Cool Sites</h2>
+      <p>Sites I like for one reason or another :3</p>
+      <div class="cool-sites-grid">
+        <a href="https://protogen.chat/" target="_blank" class="cool-site-banner">
+        <img src="assets/cool_sites_images/protogen.gif" alt="Protogen.chat">
+        </a>
+        <a href="https://hiijax.net/" target="_blank" class="cool-site-banner">
+          <img src="assets/cool_sites_images/hiijax.gif" alt="hiijax.net">
+        </a>
+        <a href="https://synth.download/" target="_blank" class="cool-site-banner">
+          <img src="assets/cool_sites_images/synthdownload.gif" alt="synth.download">
+        </a>
+        <a href="https://beeps.website/" target="_blank" class="cool-site-banner">
+          <img src="assets/cool_sites_images/beeps.gif" alt="beeps.website">
+        </a>
+        <a href="https://tuxedodragon.art/" target="_blank" class="cool-site-banner">
+          <img src="assets/cool_sites_images/tuxedodragon.gif" alt="tuxedodragon.art">
+        </a>
+        <a href="https://wiishopchannel.net/" target="_blank" class="cool-site-banner">
+          <img src="assets/cool_sites_images/wiishopchannel.gif" alt="wiishopchannel.net">
+        </a>
+        <a href="https://frutigeraeroarchive.org/" target="_blank" class="cool-site-banner">
+          <img src="assets/cool_sites_images/frutigeraeroarchive.gif" alt="frutigeraeroarchive.org">
+        </a>
+        <a href="https://hello.vrchat.com/" target="_blank" class="cool-site-banner">
+          <img src="assets/cool_sites_images/vrchat.gif" alt="vrchat.com">
+        </a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    document.fonts.ready.then(function() {
+      document.body.style.visibility = 'visible';
+    });
+  });
+
+  function toggleMenu() {
+    const menu = document.querySelector('.dropdown-menu');
+    menu.classList.toggle('active');
+  }
+</script>
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-webring">
+      <a href="https://protogen.chat/webring/m055-r0-v3r.com/previous">← Prev</a>
+      <a href="https://protogen.chat/webring">Webring</a>
+      <a href="https://protogen.chat/webring/m055-r0-v3r.com/next">Next →</a>
+    </div>
+    <p class="footer-copy">© 2026 MossRover — All rights reserved</p>
+  </div>
+</footer>
+
+</body>
+</html>

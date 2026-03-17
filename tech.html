@@ -1,0 +1,242 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark">
+    <style>html, body { background-color: #222222; visibility: hidden; }</style>
+    <title>moss's spaceship</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+    <a href="index.html" class="logo">
+        <img src="assets/others/mossrover_sign_logo.png" alt="Logo">
+    </a>
+
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="socials.html">Socials</a>
+        <a href="commissions.html">Commissions</a>
+
+        <div class="dropdown">
+            <button class="dropdown-btn active" onclick="toggleMenu()">More</button>
+            <div class="dropdown-menu">
+                <a href="tech.html">My Tech</a>
+                <a href="#">WIP 🚧</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <div class="tech-container">
+        <h1>My Tech</h1>
+
+        <div class="tech-section">
+            <h2>🖥️ PC Setup</h2>
+            <div class="tech-card">
+                <div class="tech-row">
+                    <span class="tech-label">Machine</span>
+                    <span class="tech-value">BOLT-PC</span>
+                </div>
+                <div class="tech-row">
+                    <span class="tech-label">Motherboard</span>
+                    <span class="tech-value">Gigabyte B450 Aorus PRO</span>
+                </div>
+                <div class="tech-row">
+                    <span class="tech-label">CPU</span>
+                    <span class="tech-value">AMD Ryzen 7 5800X</span>
+                </div>
+                <div class="tech-row">
+                    <span class="tech-label">RAM</span>
+                    <span class="tech-value">32GB (4x8GB) Kingston Fury Beast 3200MHz</span>
+                </div>
+                <div class="tech-row">
+                    <span class="tech-label">GPU</span>
+                    <span class="tech-value">XFX SWIFT AMD Radeon RX 9060 XT 8GB White</span>
+                </div>
+                <div class="tech-row">
+                    <span class="tech-label">Storage</span>
+                    <span class="tech-value">2x NVMe SSD — 512GB & 1TB</span>
+                </div>
+                <div class="tech-row">
+                    <span class="tech-label">Case Fans</span>
+                    <span class="tech-value">Thermalright TL-C12CW-S X3</span>
+                </div>
+                <div class="tech-row">
+                    <span class="tech-label">CPU Cooler</span>
+                    <span class="tech-value">Thermalright Assassin X 120 SE</span>
+                </div>
+                <div class="tech-row">
+                    <span class="tech-label">Case</span>
+                    <span class="tech-value">NOX Hummer Vision White</span>
+                </div>
+                <div class="tech-row">
+                    <span class="tech-label">OS</span>
+                    <span class="tech-value">Windows 11 PRO (debloated)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="tech-section">
+            <h2>💻 Laptop</h2>
+            <div class="tech-card">
+                <div class="tech-row">
+                    <span class="tech-label">Machine</span>
+                    <span class="tech-value">MacBook Air (M055-R0-V3R)</span>
+                </div>
+                <div class="tech-row">
+                    <span class="tech-label">CPU</span>
+                    <span class="tech-value">Apple M4</span>
+                </div>
+                <div class="tech-row">
+                    <span class="tech-label">RAM</span>
+                    <span class="tech-value">16GB (soldered)</span>
+                </div>
+                <div class="tech-row">
+                    <span class="tech-label">Storage</span>
+                    <span class="tech-value">256GB (soldered)</span>
+                </div>
+                <div class="tech-row">
+                    <span class="tech-label">OS</span>
+                    <span class="tech-value">macOS Tahoe 26.4 (Dev Beta)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="tech-section">
+            <h2>🗄️ Home Server</h2>
+            <div class="tech-card">
+                <div class="tech-row">
+                    <span class="tech-label">Machine</span>
+                    <span class="tech-value">Lenovo ThinkCentre M700 (Wirestone-SRV)</span>
+                </div>
+                <div class="tech-row">
+                    <span class="tech-label">CPU</span>
+                    <span class="tech-value">Intel Core i5-6400T</span>
+                </div>
+                <div class="tech-row">
+                    <span class="tech-label">RAM</span>
+                    <span class="tech-value">32GB (2x16GB) Corsair Vengeance DDR4 SO-DIMM — underclocked to 2133MHz</span>
+                </div>
+                <div class="tech-row">
+                    <span class="tech-label">iGPU</span>
+                    <span class="tech-value">Intel HD Graphics 530</span>
+                </div>
+                <div class="tech-row">
+                    <span class="tech-label">Storage</span>
+                    <span class="tech-value">Bestoss S202 128GB M.2 SATA & EMTEC X150 960GB 2.5" SATA</span>
+                </div>
+                <div class="tech-row">
+                    <span class="tech-label">OS</span>
+                    <span class="tech-value">Debian 13 Trixie — XFCE</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="tech-section">
+            <h2>📱 Mobile & Tablet</h2>
+            <div class="tech-card">
+                <div class="tech-row">
+                    <span class="tech-label">Phone</span>
+                    <span class="tech-value">Google Pixel 9A — 8GB RAM / 128GB — Obsidian</span>
+                </div>
+                <div class="tech-row">
+                    <span class="tech-label">Tablet</span>
+                    <span class="tech-value">iPad 11 — 128GB Silver</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="tech-section">
+            <h2>💻 Daily Software</h2>
+            <div class="tech-card">
+                <div class="tech-row">
+                    <span class="tech-label">ALCOM</span>
+                    <span class="tech-value">VRChat avatar projects in Unity</span>
+                </div>
+                <div class="tech-row">
+                    <span class="tech-label">Substance 3D Painter 2026</span>
+                    <span class="tech-value">Avatar texture creation</span>
+                </div>
+                <div class="tech-row">
+                    <span class="tech-label">OBS Studio</span>
+                    <span class="tech-value">Streaming on Twitch & video recording</span>
+                </div>
+                <div class="tech-row">
+                    <span class="tech-label">Discord</span>
+                    <span class="tech-value">Chatting with friends & communities</span>
+                </div>
+                <div class="tech-row">
+                    <span class="tech-label">Supersonic</span>
+                    <span class="tech-value">Music stored on my personal server</span>
+                </div>
+                <div class="tech-row">
+                    <span class="tech-label">Spotify</span>
+                    <span class="tech-value">Music & new releases</span>
+                </div>
+                <div class="tech-row">
+                    <span class="tech-label">Krita / Procreate</span>
+                    <span class="tech-value">Drawing & texture edits (PC / iPad)</span>
+                </div>
+                <div class="tech-row">
+                    <span class="tech-label">DaVinci Resolve Studio 18</span>
+                    <span class="tech-value">Video editing</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="tech-section">
+            <h2>🎮 Other Tech</h2>
+            <div class="tech-card">
+                <div class="tech-row">
+                    <span class="tech-label">Headphones</span>
+                    <span class="tech-value">AirPods 4 (ANC) & Sony WH-CH700N</span>
+                </div>
+                <div class="tech-row">
+                    <span class="tech-label">Consoles</span>
+                    <span class="tech-value">Nintendo Switch, PS5, 3DS, Wii U</span>
+                </div>
+                <div class="tech-row">
+                    <span class="tech-label">3D Printer</span>
+                    <span class="tech-value">Creality Ender 3 V3 SE — figures, prints & currently building my OC's head IRL!</span>
+                </div>
+                <div class="tech-row">
+                    <span class="tech-label">Secondary Phone</span>
+                    <span class="tech-value">Samsung Galaxy A55 8GB/128GB — used as Stream Deck, desk clock & backup phone</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.fonts.ready.then(function() {
+            document.body.style.visibility = 'visible';
+        });
+    });
+
+    function toggleMenu() {
+        const menu = document.querySelector('.dropdown-menu');
+        menu.classList.toggle('active');
+    }
+</script>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-webring">
+            <a href="https://protogen.chat/webring/m055-r0-v3r.com/previous">← Prev</a>
+            <a href="https://protogen.chat/webring">Webring</a>
+            <a href="https://protogen.chat/webring/m055-r0-v3r.com/next">Next →</a>
+        </div>
+        <p class="footer-copy">© 2026 MossRover — All rights reserved</p>
+    </div>
+</footer>
+
+</body>
+</html>

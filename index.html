@@ -1,0 +1,177 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark">
+    <style>html, body { background-color: #222222; visibility: hidden; }</style>
+    <title>moss's spaceship</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+    <a href="index.html" class="logo">
+        <img src="assets/others/mossrover_sign_logo.png" alt="Logo">
+    </a>
+
+    <nav class="navbar">
+        <a href="index.html" class="active">Home</a>
+        <a href="socials.html">Socials</a>
+        <a href="commissions.html">Commissions</a>
+
+        <div class="dropdown">
+        <button class="dropdown-btn" onclick="toggleMenu()">More</button>
+        <div class="dropdown-menu">
+            <a href="tech.html">My Tech</a>
+            <a href="#">WIP 🚧</a>
+        </div>
+    </div>
+    </nav>
+</header>
+
+<main>
+    <div class="hero">
+        <div class="card">
+            <img src="assets/others/moss_headshot.png" alt="MossRover">
+            <div class="card-text">
+                <h1>Hey! I'm MossRover</h1>
+                <p>(The Green and Brown Beeper), Welcome to my spaceship!</p>
+                <a href="#about" class="scroll-btn">Learn more ↓</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="card card-large" id="about">
+        <div class="card-text">
+            <h2>About me</h2>
+            <p>Hi there! If you don’t know me, my name is Alex, but online I'm known as Moss or Axu.</p>
+            <p>I'm 19 years old and I'm from Spain. I'm a pretty sociable person, though a bit shy at first — but I don't mind meeting new people at all!</p>
+            <p>I'm currently studying a degree in Computer Science, something I've been passionate about since I was a kid.</p>
+            <p>Besides studying, I do avatar retextures for avatars for the game VRChat (comissions are open btw), and I'm, you could say... sort of a graphic designer.</p>
+            <p>I also enjoy the following:</p>
+            <p>Art (both paper and digital)</p>
+            <p>Music (Pop, Lo-Fi, Future Funk, Rock, Indie...)</p>
+            <p>Video Games: (VRChat, Pokémon, Minecraft, Forza, and lots of indie games)</p>
+            <p>Tech: I really enjoy tinkering around and exploring every device or piece of software that catches my eye</p>
+
+            <h2>About MossRover</h2>
+            <p>MossRover is a Synth, originally manufactured as an "affordable" boxing trainer prototype — a project that turned out to be a failure. He was on the verge of being scrapped, but was rescued and repaired by Axu. He now works as an Exoplanet Explorer and Biologist.</p>
+            <p>Moss is calm and a bit shy at first, but once he opens up he's energetic, fun and reliable. He loves nature, peaceful places, landscape photography and spending time with his friends.</p>
+
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <a onclick="openLightbox(0)" class="gallery-item">
+                    <img src="placeholder.png" class="gallery-img">
+                </a>
+                <a onclick="openLightbox(1)" class="gallery-item">
+                    <img src="placeholder.png" class="gallery-img">
+                </a>
+                <a onclick="openLightbox(2)" class="gallery-item">
+                    <img src="placeholder.png" class="gallery-img">
+                </a>
+            </div>
+        </div>
+    </div>
+</main>
+
+<div class="lightbox" id="lightbox" onclick="handleLightboxClick(event)">
+    <a class="lightbox-close" onclick="closeLightbox()"></a>
+    <button class="lightbox-prev" onclick="prevImage()">&#8592;</button>
+    <div class="lightbox-content">
+        <img id="lightbox-img" src="" alt="">
+        <p id="lightbox-desc"></p>
+    </div>
+    <button class="lightbox-next" onclick="nextImage()">&#8594;</button>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-webring">
+            <a href="https://protogen.chat/webring/m055-r0-v3r.com/previous">← Prev</a>
+            <a href="https://protogen.chat/webring">Webring</a>
+            <a href="https://protogen.chat/webring/m055-r0-v3r.com/next">Next →</a>
+        </div>
+        <p class="footer-copy">© 2026 MossRover — All rights reserved</p>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.fonts.ready.then(function() {
+            document.body.style.visibility = 'visible';
+        });
+    });
+
+    function toggleMenu() {
+        const menu = document.querySelector('.dropdown-menu');
+        menu.classList.toggle('active');
+    }
+
+    const images = [
+        { src: "placeholder.png", desc: "Descripción 1" },
+        { src: "placeholder.png", desc: "Descripción 2" },
+        { src: "placeholder.png", desc: "Descripción 3" }
+    ];
+
+    let currentIndex = 0;
+
+    function openLightbox(index) {
+        currentIndex = index;
+        document.getElementById('lightbox-img').src = images[currentIndex].src;
+        document.getElementById('lightbox-desc').textContent = images[currentIndex].desc;
+        document.getElementById('lightbox').classList.add('active');
+    }
+
+    function closeLightbox() {
+        document.getElementById('lightbox').classList.remove('active');
+    }
+
+    function handleLightboxClick(event) {
+        if (event.target === document.getElementById('lightbox')) {
+            closeLightbox();
+        }
+    }
+
+    function nextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        document.getElementById('lightbox-img').src = images[currentIndex].src;
+        document.getElementById('lightbox-desc').textContent = images[currentIndex].desc;
+    }
+
+    function prevImage() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        document.getElementById('lightbox-img').src = images[currentIndex].src;
+        document.getElementById('lightbox-desc').textContent = images[currentIndex].desc;
+    }
+
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            closeLightbox();
+        }
+        if (event.key === 'ArrowRight') {
+            nextImage();
+        }
+        if (event.key === 'ArrowLeft') {
+            prevImage();
+        }
+    });
+
+    function openLightbox(index) {
+        currentIndex = index;
+        document.getElementById('lightbox-img').src = images[currentIndex].src;
+        document.getElementById('lightbox-desc').textContent = images[currentIndex].desc;
+        document.getElementById('lightbox').classList.add('active');
+        document.body.style.overflow = 'hidden';
+        window.scrollTo(0, 0);
+    }
+
+    function closeLightbox() {
+        document.getElementById('lightbox').classList.remove('active');
+        document.body.style.overflow = '';
+    }
+</script>
+
+</body>
+</html>
