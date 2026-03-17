@@ -611,3 +611,71 @@ footer {
     border-radius: 12px;
     cursor: pointer;
 }
+
+@media (max-width: 768px) {
+    header {
+        grid-template-columns: auto 1fr;
+        padding: 10px 15px;
+    }
+
+    .navbar {
+        padding: 8px 15px;
+        gap: 10px;
+    }
+
+    .navbar a {
+        font-size: 13px;
+        padding: 4px 6px;
+    }
+
+    .card {
+        width: 90%;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .card img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .card-large {
+        width: 90%;
+    }
+
+    .socials-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .socials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .commissions-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .pricing-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .examples-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tech-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .tech-row {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .tech-label {
+        min-width: unset;
+    }
+}
