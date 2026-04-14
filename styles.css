@@ -7,15 +7,13 @@
 html {
     scroll-behavior: smooth;
     background-color: #222222;
-}
-
-html, body {
     overflow-x: hidden;
 }
 
 body {
     background-color: #222222;
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
+    overflow-x: clip;
 }
 
 header {
@@ -47,7 +45,8 @@ header {
     transition: background-color 0.2s ease;
 }
 
-.navbar a:hover, .navbar a.active {
+.navbar a:hover,
+.navbar a.active {
     background-color: #795743;
     color: #ffffff;
 }
@@ -67,7 +66,8 @@ header {
     transition: background-color 0.2s ease;
 }
 
-.dropdown-btn:hover, .dropdown-btn.active {
+.dropdown-btn:hover,
+.dropdown-btn.active {
     background-color: #795743;
     color: #ffffff;
 }
@@ -495,7 +495,8 @@ main {
     cursor: pointer;
 }
 
-.lightbox-prev, .lightbox-next {
+.lightbox-prev,
+.lightbox-next {
     background: none;
     border: none;
     color: white;
@@ -505,7 +506,8 @@ main {
     z-index: 1000;
 }
 
-.lightbox-prev:hover, .lightbox-next:hover {
+.lightbox-prev:hover,
+.lightbox-next:hover {
     color: #00b18f;
 }
 
