@@ -13,6 +13,8 @@ html {
 body {
     background-color: #222222;
     font-family: "Inter", sans-serif;
+    position: relative;
+    min-height: 100vh;
 }
 
 header {
@@ -103,7 +105,7 @@ header {
 }
 
 main {
-    padding: 40px;
+    padding: 40px 40px 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -570,8 +572,9 @@ main {
 footer {
     background-color: #2a2a2a;
     padding: 20px 40px;
-    margin-top: 40px;
     width: 100%;
+    position: absolute;
+    bottom: 0;
 }
 
 .footer-content {
